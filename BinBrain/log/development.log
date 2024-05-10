@@ -1,0 +1,730 @@
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-05-10 00:43:52.422378', '2024-05-10 00:43:52.422380') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProductoEscaneados (20240510004347)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "producto_escaneados" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tipo" varchar, "empresa" varchar, "cantidad" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240510004347') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:44:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant NombreDelControladorController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:44:49 -0400
+  
+ActionController::RoutingError (uninitialized constant NombreDelControladorController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:47:56 -0400
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:47:57 -0400
+  
+ActionController::RoutingError (uninitialized constant HomeController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:49:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/sofiacastelli/Desktop/pensamiento/BinBrain/app/controllers/application_controller.rb:16: syntax error, unexpected `end'):
+  
+app/controllers/application_controller.rb:16: syntax error, unexpected `end'
+app/controllers/home_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:50:43 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1414)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1526)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 4022)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>BinBrain Dashboard</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <h1>BinBrain Dashboard</h1>
+  </header>
+  <section>
+    <h2>Resumen de Residuos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de Residuo</th>
+          <th>Cantidad</th>
+          <th>Última Ubicación</th>
+          <th>Estado del Reciclaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @waste.each do |waste| %>
+          <tr>
+            <td><%= waste.type %></td>
+            <td><%= waste.quantity %> kg</td>
+            <td><%= waste.last_location %></td>
+            <td><%= waste.recycling_status ? "Reciclado" : "Pendiente" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Alertas de Cumplimiento</h2>
+    <% if @compliance_issues.any? %>
+      <ul>
+        <% @compliance_issues.each do |issue| %>
+          <li><%= issue.message %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>Todos los residuos están en cumplimiento.</p>
+    <% endif %>
+  </section>
+  <footer>
+    <p>©️ <%= Time.now.year %> BinBrain. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>BinBrain Dashboard</title>
+5:      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+6:      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+7:      <%= csrf_meta_tags %>
+8:    </head>
+9:    <body>
+10:      <header>
+11:        <h1>BinBrain Dashboard</h1>
+12:      </header>
+13:      <section>
+14:        <h2>Resumen de Residuos</h2>
+15:        <table>
+16:          <thead>
+17:            <tr>
+18:              <th>Tipo de Residuo</th>
+19:              <th>Cantidad</th>
+20:              <th>Última Ubicación</th>
+21:              <th>Estado del Reciclaje</th>
+22:            </tr>
+23:          </thead>
+24:          <tbody>
+25:            <% @waste.each do |waste| %>
+26:              <tr>
+27:                <td><%= waste.type %></td>
+28:                <td><%= waste.quantity %> kg</td>
+29:                <td><%= waste.last_location %></td>
+30:                <td><%= waste.recycling_status ? "Reciclado" : "Pendiente" %></td>
+31:              </tr>
+32:            <% end %>
+33:          </tbody>
+34:        </table>
+35:      </section>
+36:      <section>
+37:        <h2>Alertas de Cumplimiento</h2>
+38:        <% if @compliance_issues.any? %>
+39:          <ul>
+40:            <% @compliance_issues.each do |issue| %>
+41:              <li><%= issue.message %></li>
+42:            <% end %>
+43:          </ul>
+44:        <% else %>
+45:          <p>Todos los residuos están en cumplimiento.</p>
+46:        <% endif %>
+47:      </section>
+48:      <footer>
+49:        <p>©️ <%= Time.now.year %> BinBrain. Todos los derechos reservados.</p>
+50:      </footer>
+51:    </body>
+52:    </html>
+  
+app/views/home/index.html.erb:55: syntax error, unexpected end-of-input
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:51:42 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1375)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1475)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2386)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>BinBrain Dashboard</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <h1>BinBrain Dashboard</h1>
+  </header>
+  <section>
+    <h2>Resumen de Residuos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de Residuo</th>
+          <th>Cantidad</th>
+          <th>Última Ubicación</th>
+          <th>Estado del Reciclaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @waste.each do |waste| %>
+        <tr>
+        <td><%= waste.type %></td>
+        <td><%= waste.quantity %> kg</td>
+        <td><%= waste.last_location %></td>
+        <td><%= waste.recycling_status ? "Reciclado" : "Pendiente" %></td>
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h2>Alertas de Cumplimiento</h2>
+    <% if @compliance_issues.any? %>
+      <ul>
+        <% @compliance_issues.each do |issue| %>
+          <li><%= issue.message %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>Todos los residuos están en cumplimiento.</p>
+    <% endif %>
+  </section>
+  <footer>
+    <p>©️ <%= Time.now.year %> BinBrain. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>BinBrain Dashboard</title>
+5:      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+6:      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+7:      <%= csrf_meta_tags %>
+8:    </head>
+9:    <body>
+10:      <header>
+11:        <h1>BinBrain Dashboard</h1>
+12:      </header>
+13:      <section>
+14:        <h2>Resumen de Residuos</h2>
+15:        <table>
+16:          <thead>
+17:            <tr>
+18:              <th>Tipo de Residuo</th>
+19:              <th>Cantidad</th>
+20:              <th>Última Ubicación</th>
+21:              <th>Estado del Reciclaje</th>
+22:            </tr>
+23:          </thead>
+24:          <tbody>
+25:            <% @waste.each do |waste| %>
+26:            <tr>
+27:            <td><%= waste.type %></td>
+28:            <td><%= waste.quantity %> kg</td>
+29:            <td><%= waste.last_location %></td>
+30:            <td><%= waste.recycling_status ? "Reciclado" : "Pendiente" %></td>
+31:            </tr>
+32:            <% end %>
+33:    
+34:          </tbody>
+35:        </table>
+36:      </section>
+37:      <section>
+38:        <h2>Alertas de Cumplimiento</h2>
+39:        <% if @compliance_issues.any? %>
+40:          <ul>
+41:            <% @compliance_issues.each do |issue| %>
+42:              <li><%= issue.message %></li>
+43:            <% end %>
+44:          </ul>
+45:        <% else %>
+46:          <p>Todos los residuos están en cumplimiento.</p>
+47:        <% endif %>
+48:      </section>
+49:      <footer>
+50:        <p>©️ <%= Time.now.year %> BinBrain. Todos los derechos reservados.</p>
+51:      </footer>
+52:    </body>
+53:    </html>
+  
+app/views/home/index.html.erb:56: syntax error, unexpected end-of-input
+Started GET "/" for 127.0.0.1 at 2024-05-09 20:53:29 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 124.0ms | Allocations: 79222)
+  Rendered layout layouts/application.html.erb (Duration: 124.2ms | Allocations: 79314)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms | Allocations: 89209)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000014d70>):
+    3: <head>
+    4:   <title>BinBrain Dashboard</title>
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:16:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 20314)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 20440)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 30309)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000aa28>):
+    3: <head>
+    4:   <title>BinBrain Dashboard</title>
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:16:19 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1751)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1842)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 2083)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000ad70>):
+    3: <head>
+    4:   <title>BinBrain Dashboard</title>
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:20:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered home/index.html.erb within layouts/application (Duration: 949.9ms | Allocations: 23207)
+  Rendered layout layouts/application.html.erb (Duration: 950.1ms | Allocations: 23333)
+Completed 500 Internal Server Error in 965ms (ActiveRecord: 0.0ms | Allocations: 33197)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/sofiacastelli/Desktop/pensamiento/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    3: <head>
+    4:   <title>BinBrain Dashboard</title>
+    5:   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    6:   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  
+app/views/home/index.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:22:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:25
+  Rendered home/index.html.erb within layouts/application (Duration: 39.7ms | Allocations: 19894)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 33921)
+Completed 200 OK in 62ms (Views: 48.1ms | ActiveRecord: 1.1ms | Allocations: 43837)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Intelligent Aluminum Car"], ["empresa", "Kling-Witting"], ["cantidad", 23], ["created_at", "2024-05-10 01:25:06.724385"], ["updated_at", "2024-05-10 01:25:06.724385"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.6ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Heavy Duty Rubber Bag"], ["empresa", "Robel, Langworth and Erdman"], ["cantidad", 39], ["created_at", "2024-05-10 01:25:06.727232"], ["updated_at", "2024-05-10 01:25:06.727232"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Wool Keyboard"], ["empresa", "Goyette-Russel"], ["cantidad", 55], ["created_at", "2024-05-10 01:25:06.728593"], ["updated_at", "2024-05-10 01:25:06.728593"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Mediocre Plastic Watch"], ["empresa", "Conn, Bahringer and D'Amore"], ["cantidad", 4], ["created_at", "2024-05-10 01:25:06.729717"], ["updated_at", "2024-05-10 01:25:06.729717"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Marble Car"], ["empresa", "Mills, Kautzer and Gutkowski"], ["cantidad", 1], ["created_at", "2024-05-10 01:25:06.730807"], ["updated_at", "2024-05-10 01:25:06.730807"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Mediocre Concrete Wallet"], ["empresa", "Durgan-Konopelski"], ["cantidad", 46], ["created_at", "2024-05-10 01:25:06.731919"], ["updated_at", "2024-05-10 01:25:06.731919"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Aerodynamic Wooden Gloves"], ["empresa", "Kozey-Swift"], ["cantidad", 2], ["created_at", "2024-05-10 01:25:06.732972"], ["updated_at", "2024-05-10 01:25:06.732972"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Fantastic Steel Shirt"], ["empresa", "Cummings-Lesch"], ["cantidad", 5], ["created_at", "2024-05-10 01:25:06.734035"], ["updated_at", "2024-05-10 01:25:06.734035"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Bronze Plate"], ["empresa", "Koch, Murazik and Barrows"], ["cantidad", 85], ["created_at", "2024-05-10 01:25:06.735106"], ["updated_at", "2024-05-10 01:25:06.735106"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Rubber Wallet"], ["empresa", "Kovacek Group"], ["cantidad", 94], ["created_at", "2024-05-10 01:25:06.736146"], ["updated_at", "2024-05-10 01:25:06.736146"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Paper Watch"], ["empresa", "Towne Group"], ["cantidad", 90], ["created_at", "2024-05-10 01:25:06.737214"], ["updated_at", "2024-05-10 01:25:06.737214"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Heavy Duty Steel Car"], ["empresa", "Boyle Group"], ["cantidad", 64], ["created_at", "2024-05-10 01:25:06.738285"], ["updated_at", "2024-05-10 01:25:06.738285"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Practical Iron Shirt"], ["empresa", "Mraz, Wyman and Thompson"], ["cantidad", 71], ["created_at", "2024-05-10 01:25:06.739333"], ["updated_at", "2024-05-10 01:25:06.739333"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Intelligent Bronze Clock"], ["empresa", "Ankunding, Ullrich and Rutherford"], ["cantidad", 68], ["created_at", "2024-05-10 01:25:06.740391"], ["updated_at", "2024-05-10 01:25:06.740391"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Enormous Wool Shirt"], ["empresa", "Gibson-Gutkowski"], ["cantidad", 81], ["created_at", "2024-05-10 01:25:06.741414"], ["updated_at", "2024-05-10 01:25:06.741414"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Fantastic Bronze Pants"], ["empresa", "Swaniawski, MacGyver and Schneider"], ["cantidad", 10], ["created_at", "2024-05-10 01:25:06.742443"], ["updated_at", "2024-05-10 01:25:06.742443"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Copper Plate"], ["empresa", "Stark LLC"], ["cantidad", 58], ["created_at", "2024-05-10 01:25:06.743477"], ["updated_at", "2024-05-10 01:25:06.743477"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Heavy Duty Aluminum Shoes"], ["empresa", "Renner, Deckow and Wuckert"], ["cantidad", 89], ["created_at", "2024-05-10 01:25:06.744518"], ["updated_at", "2024-05-10 01:25:06.744518"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Durable Leather Shoes"], ["empresa", "Christiansen-Purdy"], ["cantidad", 81], ["created_at", "2024-05-10 01:25:06.745549"], ["updated_at", "2024-05-10 01:25:06.745549"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Enormous Granite Bench"], ["empresa", "Emard, Predovic and Mosciski"], ["cantidad", 10], ["created_at", "2024-05-10 01:25:06.746565"], ["updated_at", "2024-05-10 01:25:06.746565"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Awesome Marble Coat"], ["empresa", "Osinski LLC"], ["cantidad", 37], ["created_at", "2024-05-10 01:25:06.747593"], ["updated_at", "2024-05-10 01:25:06.747593"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Plastic Bench"], ["empresa", "Konopelski, Stracke and Dietrich"], ["cantidad", 67], ["created_at", "2024-05-10 01:25:06.748635"], ["updated_at", "2024-05-10 01:25:06.748635"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Gorgeous Wooden Car"], ["empresa", "Murazik-Cruickshank"], ["cantidad", 93], ["created_at", "2024-05-10 01:25:06.749668"], ["updated_at", "2024-05-10 01:25:06.749668"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Rustic Granite Table"], ["empresa", "Hodkiewicz-McClure"], ["cantidad", 5], ["created_at", "2024-05-10 01:25:06.750695"], ["updated_at", "2024-05-10 01:25:06.750695"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Granite Wallet"], ["empresa", "Thompson, Halvorson and Littel"], ["cantidad", 92], ["created_at", "2024-05-10 01:25:06.751744"], ["updated_at", "2024-05-10 01:25:06.751744"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (5.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Durable Plastic Pants"], ["empresa", "Powlowski Inc"], ["cantidad", 42], ["created_at", "2024-05-10 01:25:06.752773"], ["updated_at", "2024-05-10 01:25:06.752773"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Granite Chair"], ["empresa", "Carroll-Wintheiser"], ["cantidad", 13], ["created_at", "2024-05-10 01:25:06.758613"], ["updated_at", "2024-05-10 01:25:06.758613"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Practical Wool Lamp"], ["empresa", "Dietrich-Medhurst"], ["cantidad", 86], ["created_at", "2024-05-10 01:25:06.759951"], ["updated_at", "2024-05-10 01:25:06.759951"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.5ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Practical Copper Car"], ["empresa", "Hermiston LLC"], ["cantidad", 10], ["created_at", "2024-05-10 01:25:06.760945"], ["updated_at", "2024-05-10 01:25:06.760945"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Awesome Cotton Plate"], ["empresa", "Pacocha Group"], ["cantidad", 15], ["created_at", "2024-05-10 01:25:06.762146"], ["updated_at", "2024-05-10 01:25:06.762146"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Durable Marble Watch"], ["empresa", "Huel Group"], ["cantidad", 18], ["created_at", "2024-05-10 01:25:06.763319"], ["updated_at", "2024-05-10 01:25:06.763319"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Sleek Silk Clock"], ["empresa", "Keebler-Herman"], ["cantidad", 55], ["created_at", "2024-05-10 01:25:06.764286"], ["updated_at", "2024-05-10 01:25:06.764286"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Durable Linen Table"], ["empresa", "Barrows-Wyman"], ["cantidad", 66], ["created_at", "2024-05-10 01:25:06.765348"], ["updated_at", "2024-05-10 01:25:06.765348"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Sleek Iron Chair"], ["empresa", "Adams-Klocko"], ["cantidad", 6], ["created_at", "2024-05-10 01:25:06.766320"], ["updated_at", "2024-05-10 01:25:06.766320"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Small Steel Keyboard"], ["empresa", "Wolff-Prosacco"], ["cantidad", 18], ["created_at", "2024-05-10 01:25:06.767355"], ["updated_at", "2024-05-10 01:25:06.767355"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Steel Gloves"], ["empresa", "Moore, Mitchell and Waters"], ["cantidad", 83], ["created_at", "2024-05-10 01:25:06.768417"], ["updated_at", "2024-05-10 01:25:06.768417"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Aerodynamic Iron Bag"], ["empresa", "Kshlerin LLC"], ["cantidad", 35], ["created_at", "2024-05-10 01:25:06.769413"], ["updated_at", "2024-05-10 01:25:06.769413"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Intelligent Bronze Bottle"], ["empresa", "Torphy-Rath"], ["cantidad", 56], ["created_at", "2024-05-10 01:25:06.770451"], ["updated_at", "2024-05-10 01:25:06.770451"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Iron Gloves"], ["empresa", "Huel Inc"], ["cantidad", 62], ["created_at", "2024-05-10 01:25:06.771415"], ["updated_at", "2024-05-10 01:25:06.771415"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Heavy Duty Aluminum Gloves"], ["empresa", "Gerhold, Klocko and Reilly"], ["cantidad", 89], ["created_at", "2024-05-10 01:25:06.772469"], ["updated_at", "2024-05-10 01:25:06.772469"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Iron Gloves"], ["empresa", "Schinner, Stiedemann and Lang"], ["cantidad", 64], ["created_at", "2024-05-10 01:25:06.773589"], ["updated_at", "2024-05-10 01:25:06.773589"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Heavy Duty Granite Gloves"], ["empresa", "Bednar and Sons"], ["cantidad", 82], ["created_at", "2024-05-10 01:25:06.774565"], ["updated_at", "2024-05-10 01:25:06.774565"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Durable Wooden Bench"], ["empresa", "O'Conner, Labadie and Abernathy"], ["cantidad", 78], ["created_at", "2024-05-10 01:25:06.775635"], ["updated_at", "2024-05-10 01:25:06.775635"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Fantastic Paper Lamp"], ["empresa", "Kub Inc"], ["cantidad", 30], ["created_at", "2024-05-10 01:25:06.776627"], ["updated_at", "2024-05-10 01:25:06.776627"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Awesome Aluminum Watch"], ["empresa", "Weimann-Fay"], ["cantidad", 14], ["created_at", "2024-05-10 01:25:06.777703"], ["updated_at", "2024-05-10 01:25:06.777703"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Silk Knife"], ["empresa", "Watsica Inc"], ["cantidad", 6], ["created_at", "2024-05-10 01:25:06.778667"], ["updated_at", "2024-05-10 01:25:06.778667"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Rustic Bronze Wallet"], ["empresa", "Effertz, Strosin and Ritchie"], ["cantidad", 39], ["created_at", "2024-05-10 01:25:06.779753"], ["updated_at", "2024-05-10 01:25:06.779753"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Ergonomic Plastic Wallet"], ["empresa", "Terry LLC"], ["cantidad", 18], ["created_at", "2024-05-10 01:25:06.780856"], ["updated_at", "2024-05-10 01:25:06.780856"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Practical Marble Bench"], ["empresa", "Cummerata, Monahan and Pagac"], ["cantidad", 76], ["created_at", "2024-05-10 01:25:06.785994"], ["updated_at", "2024-05-10 01:25:06.785994"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Ergonomic Leather Bag"], ["empresa", "Muller, Wisoky and Morissette"], ["cantidad", 21], ["created_at", "2024-05-10 01:25:06.787263"], ["updated_at", "2024-05-10 01:25:06.787263"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:25:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:25
+  Rendered home/index.html.erb within layouts/application (Duration: 35.8ms | Allocations: 35070)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 49092)
+Completed 200 OK in 161ms (Views: 44.6ms | ActiveRecord: 1.0ms | Allocations: 338683)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:27:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.4ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:25
+  Rendered home/index.html.erb within layouts/application (Duration: 24.4ms | Allocations: 33514)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 47536)
+Completed 200 OK in 152ms (Views: 31.9ms | ActiveRecord: 1.4ms | Allocations: 337127)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:29:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.3ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 33468)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 47490)
+Completed 200 OK in 171ms (Views: 37.4ms | ActiveRecord: 1.3ms | Allocations: 337081)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:30:47 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 6928)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 20627)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 1.3ms | Allocations: 22313)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:31:06 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 6956)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 20791)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 1.0ms | Allocations: 22482)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:32:09 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.6ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:58
+  Rendered home/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 6890)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 20774)
+Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 2.0ms | Allocations: 22458)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:32:30 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 6955)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 20697)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 1.4ms | Allocations: 22382)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:32:32 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3347)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4047)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 4316)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:32:32 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3352)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4052)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 4312)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:33:07 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:56
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 6930)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 20766)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 1.1ms | Allocations: 22453)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:37:48 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 6913)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 20792)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 1.4ms | Allocations: 22474)
+
+
+Started GET "/BinBrain/app/views/home/WhatsApp%20Image%202024-05-06%20at%2021.07.22.jpeg" for 127.0.0.1 at 2024-05-09 21:37:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/BinBrain/app/views/home/WhatsApp%20Image%202024-05-06%20at%2021.07.22.jpeg"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:39:46 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:57
+  Rendered home/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 6964)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 20798)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 1.2ms | Allocations: 22486)
+
+
+Started GET "/BinBrain/app/views/home/WhatsApp%20Image%202024-05-06%20at%2021.07.22.jpeg" for 127.0.0.1 at 2024-05-09 21:39:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/BinBrain/app/views/home/WhatsApp%20Image%202024-05-06%20at%2021.07.22.jpeg"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:40:12 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:56
+  Rendered home/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 6944)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 20778)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.2ms | Allocations: 22465)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:41:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:66
+  Rendered home/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 33555)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 47577)
+Completed 200 OK in 157ms (Views: 35.4ms | ActiveRecord: 1.2ms | Allocations: 337168)
+
+
+Started GET "/BinBrain/app/views/home/WhatsApp%20Image%202024-05-06%20at%2021.07.22.jpeg" for 127.0.0.1 at 2024-05-09 21:41:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/BinBrain/app/views/home/WhatsApp%20Image%202024-05-06%20at%2021.07.22.jpeg"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:41:42 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:63
+  Rendered home/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 6987)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 20821)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 1.1ms | Allocations: 22509)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-09 21:56:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.4ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:63
+  Rendered home/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 33581)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 47699)
+Completed 200 OK in 158ms (Views: 34.2ms | ActiveRecord: 1.4ms | Allocations: 337402)
+
+

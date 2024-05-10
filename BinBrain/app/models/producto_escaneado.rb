@@ -1,0 +1,2 @@
+class ProductoEscaneado < ApplicationRecord
+end
