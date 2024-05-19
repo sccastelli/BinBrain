@@ -16,10 +16,18 @@ ProductoEscaneado.destroy_all
 # Crear productos escaneados ficticios utilizando Faker
 
 50.times do
+  name = Faker::Faker::Company.name
+  cantidad = Faker::Number.between(from: 1, to: 100)
+  empresa.create(name: empresa, cantidad: cantidad)
+end
+
+50.times do
   tipo = Faker::Commerce.product_name
   empresa = Faker::Company.name
   cantidad = Faker::Number.between(from: 1, to: 100)
   ProductoEscaneado.create(tipo: tipo, empresa: empresa, cantidad: cantidad)
 end
+
+
 
 

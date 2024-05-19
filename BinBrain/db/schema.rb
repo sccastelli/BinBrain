@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_10_004347) do
-  create_table "producto_escaneados", force: :cascade do |t|
-    t.string "tipo"
-    t.string "empresa"
-    t.integer "cantidad"
+ActiveRecord::Schema[7.1].define(version: 2024_05_19_153304) do
+  create_table "empresa", force: :cascade do |t|
+    t.string "name"
+    t.integer "cantidad_desechos"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "producto_escaneados", force: :cascade do |t|
+    t.string "tipo"
+    t.integer "empresa_id"
+    t.integer "cantidad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["empresa_id"], name: "index_producto_escaneados_on_empresa_id"
+  end
+
+  add_foreign_key "producto_escaneados", "empresas"
 end
