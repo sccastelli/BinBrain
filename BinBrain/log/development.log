@@ -773,3 +773,649 @@ FOREIGN KEY ("empresa_id")
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEmpresas (20240519155531)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (36.0ms)[0m  [1m[35mCREATE TABLE "empresas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cantidad_desechos" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240519155531') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-05-19 16:05:03.869520', '2024-05-19 16:05:03.869524') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresa (20240519153303)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresa (20240519153303)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresa (20240519153303)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresa (20240519153303)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresa (20240519153303)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresa (20240519153303)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresa (20240519153303)
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresas (20240519153303)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-05-19 16:18:23.495650', '2024-05-19 16:18:23.495653') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Empresas (20240519153303)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-05-19 16:23:47.236289', '2024-05-19 16:23:47.236293') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEmpresas (20240519153303)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "empresas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "cantidad_desechos" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240519153303') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProductoEscaneados (20240519153304)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "producto_escaneados" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "tipo" varchar, "empresa_id" integer, "cantidad" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_7b0a60faad"
+FOREIGN KEY ("empresa_id")
+  REFERENCES "empresas" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_producto_escaneados_on_empresa_id" ON "producto_escaneados" ("empresa_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240519153304') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.3ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Kuhic-Simonis"], ["cantidad_desechos", 30], ["created_at", "2024-05-19 16:24:04.955810"], ["updated_at", "2024-05-19 16:24:04.955810"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (2.1ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Ergonomic Concrete Pants"], ["empresa_id", 1], ["cantidad", 456], ["created_at", "2024-05-19 16:24:04.990352"], ["updated_at", "2024-05-19 16:24:04.990352"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Paper Lamp"], ["empresa_id", 1], ["cantidad", 981], ["created_at", "2024-05-19 16:24:04.995308"], ["updated_at", "2024-05-19 16:24:04.995308"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Intelligent Iron Lamp"], ["empresa_id", 1], ["cantidad", 216], ["created_at", "2024-05-19 16:24:04.999011"], ["updated_at", "2024-05-19 16:24:04.999011"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Practical Iron Bag"], ["empresa_id", 1], ["cantidad", 988], ["created_at", "2024-05-19 16:24:05.003415"], ["updated_at", "2024-05-19 16:24:05.003415"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Aluminum Bench"], ["empresa_id", 1], ["cantidad", 642], ["created_at", "2024-05-19 16:24:05.007312"], ["updated_at", "2024-05-19 16:24:05.007312"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.1ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Schinner-Block"], ["cantidad_desechos", 48], ["created_at", "2024-05-19 16:24:05.010680"], ["updated_at", "2024-05-19 16:24:05.010680"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Enormous Cotton Coat"], ["empresa_id", 2], ["cantidad", 209], ["created_at", "2024-05-19 16:24:05.014576"], ["updated_at", "2024-05-19 16:24:05.014576"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.8ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Practical Concrete Gloves"], ["empresa_id", 2], ["cantidad", 655], ["created_at", "2024-05-19 16:24:05.018529"], ["updated_at", "2024-05-19 16:24:05.018529"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Wooden Bag"], ["empresa_id", 2], ["cantidad", 894], ["created_at", "2024-05-19 16:24:05.023992"], ["updated_at", "2024-05-19 16:24:05.023992"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Leather Watch"], ["empresa_id", 2], ["cantidad", 163], ["created_at", "2024-05-19 16:24:05.027583"], ["updated_at", "2024-05-19 16:24:05.027583"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Bronze Hat"], ["empresa_id", 2], ["cantidad", 837], ["created_at", "2024-05-19 16:24:05.084512"], ["updated_at", "2024-05-19 16:24:05.084512"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.7ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Weissnat, Homenick and Jast"], ["cantidad_desechos", 54], ["created_at", "2024-05-19 16:24:05.089508"], ["updated_at", "2024-05-19 16:24:05.089508"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Intelligent Wooden Shirt"], ["empresa_id", 3], ["cantidad", 456], ["created_at", "2024-05-19 16:24:05.094838"], ["updated_at", "2024-05-19 16:24:05.094838"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Plastic Car"], ["empresa_id", 3], ["cantidad", 991], ["created_at", "2024-05-19 16:24:05.099390"], ["updated_at", "2024-05-19 16:24:05.099390"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.7ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Gorgeous Wool Car"], ["empresa_id", 3], ["cantidad", 937], ["created_at", "2024-05-19 16:24:05.104002"], ["updated_at", "2024-05-19 16:24:05.104002"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Gorgeous Paper Bench"], ["empresa_id", 3], ["cantidad", 879], ["created_at", "2024-05-19 16:24:05.108393"], ["updated_at", "2024-05-19 16:24:05.108393"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Enormous Cotton Plate"], ["empresa_id", 3], ["cantidad", 452], ["created_at", "2024-05-19 16:24:05.112205"], ["updated_at", "2024-05-19 16:24:05.112205"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.2ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "White Inc"], ["cantidad_desechos", 31], ["created_at", "2024-05-19 16:24:05.116263"], ["updated_at", "2024-05-19 16:24:05.116263"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.1ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Durable Paper Keyboard"], ["empresa_id", 4], ["cantidad", 586], ["created_at", "2024-05-19 16:24:05.120434"], ["updated_at", "2024-05-19 16:24:05.120434"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Mediocre Granite Clock"], ["empresa_id", 4], ["cantidad", 757], ["created_at", "2024-05-19 16:24:05.125259"], ["updated_at", "2024-05-19 16:24:05.125259"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Aerodynamic Silk Shoes"], ["empresa_id", 4], ["cantidad", 742], ["created_at", "2024-05-19 16:24:05.129541"], ["updated_at", "2024-05-19 16:24:05.129541"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (2.6ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Sleek Leather Pants"], ["empresa_id", 4], ["cantidad", 755], ["created_at", "2024-05-19 16:24:05.134102"], ["updated_at", "2024-05-19 16:24:05.134102"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.9ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Intelligent Iron Hat"], ["empresa_id", 4], ["cantidad", 990], ["created_at", "2024-05-19 16:24:05.140565"], ["updated_at", "2024-05-19 16:24:05.140565"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.4ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Predovic, Prohaska and Schamberger"], ["cantidad_desechos", 78], ["created_at", "2024-05-19 16:24:05.145900"], ["updated_at", "2024-05-19 16:24:05.145900"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Mediocre Aluminum Chair"], ["empresa_id", 5], ["cantidad", 858], ["created_at", "2024-05-19 16:24:05.150268"], ["updated_at", "2024-05-19 16:24:05.150268"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Enormous Marble Wallet"], ["empresa_id", 5], ["cantidad", 1], ["created_at", "2024-05-19 16:24:05.154192"], ["updated_at", "2024-05-19 16:24:05.154192"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (2.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Gorgeous Concrete Coat"], ["empresa_id", 5], ["cantidad", 196], ["created_at", "2024-05-19 16:24:05.158614"], ["updated_at", "2024-05-19 16:24:05.158614"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Fantastic Leather Bench"], ["empresa_id", 5], ["cantidad", 469], ["created_at", "2024-05-19 16:24:05.164750"], ["updated_at", "2024-05-19 16:24:05.164750"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.5ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Fantastic Marble Pants"], ["empresa_id", 5], ["cantidad", 665], ["created_at", "2024-05-19 16:24:05.169711"], ["updated_at", "2024-05-19 16:24:05.169711"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.4ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Lakin, Kuhn and Gulgowski"], ["cantidad_desechos", 39], ["created_at", "2024-05-19 16:24:05.175277"], ["updated_at", "2024-05-19 16:24:05.175277"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Intelligent Copper Shirt"], ["empresa_id", 6], ["cantidad", 948], ["created_at", "2024-05-19 16:24:05.179815"], ["updated_at", "2024-05-19 16:24:05.179815"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Durable Plastic Shirt"], ["empresa_id", 6], ["cantidad", 501], ["created_at", "2024-05-19 16:24:05.183793"], ["updated_at", "2024-05-19 16:24:05.183793"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Wool Keyboard"], ["empresa_id", 6], ["cantidad", 284], ["created_at", "2024-05-19 16:24:05.187368"], ["updated_at", "2024-05-19 16:24:05.187368"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.6ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Ergonomic Wool Plate"], ["empresa_id", 6], ["cantidad", 307], ["created_at", "2024-05-19 16:24:05.192206"], ["updated_at", "2024-05-19 16:24:05.192206"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.5ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Rustic Granite Watch"], ["empresa_id", 6], ["cantidad", 788], ["created_at", "2024-05-19 16:24:05.196719"], ["updated_at", "2024-05-19 16:24:05.196719"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.4ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Terry-Doyle"], ["cantidad_desechos", 80], ["created_at", "2024-05-19 16:24:05.201215"], ["updated_at", "2024-05-19 16:24:05.201215"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.1ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Gorgeous Aluminum Computer"], ["empresa_id", 7], ["cantidad", 605], ["created_at", "2024-05-19 16:24:05.205723"], ["updated_at", "2024-05-19 16:24:05.205723"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.1ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Fantastic Marble Clock"], ["empresa_id", 7], ["cantidad", 957], ["created_at", "2024-05-19 16:24:05.210399"], ["updated_at", "2024-05-19 16:24:05.210399"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Lightweight Wool Knife"], ["empresa_id", 7], ["cantidad", 101], ["created_at", "2024-05-19 16:24:05.214316"], ["updated_at", "2024-05-19 16:24:05.214316"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Heavy Duty Concrete Bench"], ["empresa_id", 7], ["cantidad", 553], ["created_at", "2024-05-19 16:24:05.218334"], ["updated_at", "2024-05-19 16:24:05.218334"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Aerodynamic Aluminum Table"], ["empresa_id", 7], ["cantidad", 408], ["created_at", "2024-05-19 16:24:05.222559"], ["updated_at", "2024-05-19 16:24:05.222559"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (3.6ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Schultz, Predovic and Little"], ["cantidad_desechos", 48], ["created_at", "2024-05-19 16:24:05.230551"], ["updated_at", "2024-05-19 16:24:05.230551"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Cotton Shoes"], ["empresa_id", 8], ["cantidad", 402], ["created_at", "2024-05-19 16:24:05.237684"], ["updated_at", "2024-05-19 16:24:05.237684"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Awesome Leather Bag"], ["empresa_id", 8], ["cantidad", 206], ["created_at", "2024-05-19 16:24:05.241502"], ["updated_at", "2024-05-19 16:24:05.241502"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Ergonomic Iron Lamp"], ["empresa_id", 8], ["cantidad", 187], ["created_at", "2024-05-19 16:24:05.245262"], ["updated_at", "2024-05-19 16:24:05.245262"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Heavy Duty Paper Shoes"], ["empresa_id", 8], ["cantidad", 876], ["created_at", "2024-05-19 16:24:05.249610"], ["updated_at", "2024-05-19 16:24:05.249610"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Sleek Linen Lamp"], ["empresa_id", 8], ["cantidad", 443], ["created_at", "2024-05-19 16:24:05.253525"], ["updated_at", "2024-05-19 16:24:05.253525"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.2ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Windler Inc"], ["cantidad_desechos", 37], ["created_at", "2024-05-19 16:24:05.257048"], ["updated_at", "2024-05-19 16:24:05.257048"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.4ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Paper Pants"], ["empresa_id", 9], ["cantidad", 101], ["created_at", "2024-05-19 16:24:05.261655"], ["updated_at", "2024-05-19 16:24:05.261655"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.1ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Incredible Aluminum Chair"], ["empresa_id", 9], ["cantidad", 929], ["created_at", "2024-05-19 16:24:05.265931"], ["updated_at", "2024-05-19 16:24:05.265931"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.3ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Fantastic Rubber Gloves"], ["empresa_id", 9], ["cantidad", 377], ["created_at", "2024-05-19 16:24:05.269702"], ["updated_at", "2024-05-19 16:24:05.269702"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Enormous Iron Plate"], ["empresa_id", 9], ["cantidad", 507], ["created_at", "2024-05-19 16:24:05.273662"], ["updated_at", "2024-05-19 16:24:05.273662"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.9ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Sleek Steel Keyboard"], ["empresa_id", 9], ["cantidad", 505], ["created_at", "2024-05-19 16:24:05.277041"], ["updated_at", "2024-05-19 16:24:05.277041"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmpresa Create (1.2ms)[0m  [1m[32mINSERT INTO "empresas" ("name", "cantidad_desechos", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["name", "Hodkiewicz, Kihn and Feest"], ["cantidad_desechos", 96], ["created_at", "2024-05-19 16:24:05.280420"], ["updated_at", "2024-05-19 16:24:05.280420"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (0.9ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Gorgeous Copper Chair"], ["empresa_id", 10], ["cantidad", 742], ["created_at", "2024-05-19 16:24:05.283964"], ["updated_at", "2024-05-19 16:24:05.283964"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.5ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Sleek Aluminum Lamp"], ["empresa_id", 10], ["cantidad", 539], ["created_at", "2024-05-19 16:24:05.287164"], ["updated_at", "2024-05-19 16:24:05.287164"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.2ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Synergistic Paper Watch"], ["empresa_id", 10], ["cantidad", 550], ["created_at", "2024-05-19 16:24:05.291088"], ["updated_at", "2024-05-19 16:24:05.291088"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.1ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Ergonomic Aluminum Table"], ["empresa_id", 10], ["cantidad", 531], ["created_at", "2024-05-19 16:24:05.296770"], ["updated_at", "2024-05-19 16:24:05.296770"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProductoEscaneado Create (1.0ms)[0m  [1m[32mINSERT INTO "producto_escaneados" ("tipo", "empresa_id", "cantidad", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["tipo", "Enormous Aluminum Gloves"], ["empresa_id", 10], ["cantidad", 3], ["created_at", "2024-05-19 16:24:05.300751"], ["updated_at", "2024-05-19 16:24:05.300751"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProductoEscaneado Load (1.3ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:26:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mProductoEscaneado Load (0.3ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados"[0m
+  ↳ app/views/home/index.html.erb:63
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  [1m[36mCACHE Empresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:66
+  Rendered home/index.html.erb within layouts/application (Duration: 830.7ms | Allocations: 130218)
+  Rendered layout layouts/application.html.erb (Duration: 866.0ms | Allocations: 144158)
+Completed 200 OK in 1220ms (Views: 876.8ms | ActiveRecord: 6.0ms | Allocations: 437521)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:30:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.5ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.8ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.5ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 132.1ms | Allocations: 32315)
+  Rendered layout layouts/application.html.erb (Duration: 271.6ms | Allocations: 67396)
+Completed 200 OK in 650ms (Views: 270.5ms | ActiveRecord: 7.0ms | Allocations: 358256)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:40:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.5ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.3ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 117.0ms | Allocations: 28684)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 3151.6ms | Allocations: 34923)
+Completed 500 Internal Server Error in 3635ms (ActiveRecord: 7.6ms | Allocations: 326122)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/marpin/web/BinBrain.github.io/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:40:34 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.4ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.6ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 32.7ms | Allocations: 7815)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 1391.2ms | Allocations: 11262)
+Completed 500 Internal Server Error in 1393ms (ActiveRecord: 1.8ms | Allocations: 11525)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/marpin/web/BinBrain.github.io/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:46:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.3ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.9ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.5ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 156.3ms | Allocations: 28663)
+[Webpacker] Compiling...
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:46:17 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (2.5ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.6ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.3ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.4ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 96.0ms | Allocations: 8124)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 3145.0ms | Allocations: 46687)
+Completed 500 Internal Server Error in 3765ms (ActiveRecord: 8.8ms | Allocations: 337795)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/marpin/web/BinBrain.github.io/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 2707.4ms | Allocations: 505341)
+Completed 500 Internal Server Error in 2710ms (ActiveRecord: 6.2ms | Allocations: 505604)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/marpin/web/BinBrain.github.io/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9

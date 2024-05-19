@@ -1,3 +1,3 @@
-class ProductoEscaneado < ApplicationRecord
-    belongs_to :empresa
+class Empresa < ApplicationRecord
+    has_many :producto_escaneados, dependent: :destroy
 end

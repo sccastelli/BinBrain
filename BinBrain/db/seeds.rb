@@ -1,33 +1,27 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-# seeds.rb
+# db/seeds.rb
+require 'faker'
 
-# Limpiar la base de datos antes de ejecutar las semillas
-
+# Clear existing data
+Empresa.destroy_all
 ProductoEscaneado.destroy_all
 
-# Crear productos escaneados ficticios utilizando Faker
+# Create 10 empresas
+10.times do
+  empresa = Empresa.create!(
+    name: Faker::Company.name,
+    cantidad_desechos: Faker::Number.between(from: 1, to: 100)
+  )
 
-50.times do
-  name = Faker::Faker::Company.name
-  cantidad = Faker::Number.between(from: 1, to: 100)
-  empresa.create(name: empresa, cantidad: cantidad)
+  # Create 5 producto_escaneados for each empresa
+  5.times do
+    ProductoEscaneado.create!(
+      tipo: Faker::Commerce.product_name,
+      empresa: empresa,
+      cantidad: Faker::Number.between(from: 1, to: 1000)
+    )
+  end
 end
 
-50.times do
-  tipo = Faker::Commerce.product_name
-  empresa = Faker::Company.name
-  cantidad = Faker::Number.between(from: 1, to: 100)
-  ProductoEscaneado.create(tipo: tipo, empresa: empresa, cantidad: cantidad)
-end
-
-
+puts "Seeding complete!"
 
 

@@ -1,76 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>BinBrain Dashboard</title>
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <%= csrf_meta_tags %>
-  <style>
-    body {
-      background-color: #f4f4f4;
-      color: #333;
-      font-family: 'Arial', sans-serif;
-    }
-    header {
-      background-color: #59A52C;
-      color: #fff;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between; /* Espacia el contenido entre sí */
-      align-items: center; /* Centra verticalmente el contenido */
-    }
-    h1, h2 {
-      margin: 0;
-      padding: 10px 0;
-    }
-    table {
-      background-color: #fff;
-      margin-top: 20px;
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #grey;
-      color: white;
-    }
-    .logo-right {
-      display: flex;
-      justify-content: flex-end; /* Alinea el contenido a la derecha */
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>BinBrain Dashboard</h1>
-  </header>
-  <section class="container">
-    <h2>Resumen de Residuos</h2>
-    <table class="table table-hover">
-      <thead class="thead-dark">
-        <tr>
-          <th>Tipo de Residuo</th>
-          <th>Empresa</th>
-          <th>Cantidad</th>
-          <th>Fecha de Creación</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @producto_escaneados.each do |producto_escaneado| %>
-          <tr>
-            <td><%= producto_escaneado.tipo %></td>
-            <td><%= producto_escaneado.empresa %></td>
-            <td><%= producto_escaneado.cantidad %></td>
-            <td><%= producto_escaneado.created_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </section>
-  <!-- Resto de tu código -->
-</body>
-</html>
+<h1 class="my-4">Empresas y Productos Escaneados</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Empresa</th>
+      <th>Cantidad de Productos Escaneados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @empresas.each do |empresa| %>
+      <tr>
+        <td><%= empresa.name %></td>
+        <td><%= empresa.producto_escaneados.sum(:cantidad) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

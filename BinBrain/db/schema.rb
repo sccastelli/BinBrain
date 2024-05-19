@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_05_19_153304) do
-  create_table "empresa", force: :cascade do |t|
+  create_table "empresas", force: :cascade do |t|
     t.string "name"
     t.integer "cantidad_desechos"
     t.datetime "created_at", null: false

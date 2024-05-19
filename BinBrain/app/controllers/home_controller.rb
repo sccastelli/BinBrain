@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @producto_escaneados = ProductoEscaneado.all
+    @empresas = Empresa.includes(:producto_escaneados).all
   end
 end
+
