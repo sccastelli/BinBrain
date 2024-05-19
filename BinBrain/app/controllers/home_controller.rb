@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @empresas = Empresa.includes(:producto_escaneados).all
+    @empresas = Empresa.all
+  end
+
+  def show
+    @empresa = Empresa.find(params[:id])
   end
 end
 

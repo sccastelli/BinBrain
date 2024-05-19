@@ -1,5 +1,16 @@
 #!/usr/bin/env ruby
 
+default: &default
+  source_path: app/javascript
+  source_entry_path: packs
+  public_output_path: packs
+  cache_path: tmp/cache/webpacker
+  check_yarn_integrity: true
+
+development:
+  <<: *default
+  compile: true
+
 ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
 ENV["NODE_ENV"]  ||= "development"
 

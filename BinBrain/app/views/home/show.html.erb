@@ -1,0 +1,23 @@
+
+<h1><%= @empresa.name %></h1>
+<p>Cantidad de productos escaneados: <%= @empresa.producto_escaneados.sum(:cantidad) %></p>
+
+<h2>Productos Escaneados</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @empresa.producto_escaneados.each do |producto| %>
+      <tr>
+        <td><%= producto.tipo %></td>
+        <td><%= producto.cantidad %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Volver', home_index_path, class: 'btn btn-secondary' %>

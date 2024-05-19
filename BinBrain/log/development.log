@@ -1419,3 +1419,758 @@ Your manifest contains:
     12:   <body>
   
 app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:56:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 35305)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 1069.2ms | Allocations: 41302)
+Completed 500 Internal Server Error in 1188ms (ActiveRecord: 1.6ms | Allocations: 332428)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/sofiacastelli/Documents/GitHub/BinBrain/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:59:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 28719)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 711.7ms | Allocations: 34709)
+Completed 500 Internal Server Error in 859ms (ActiveRecord: 1.6ms | Allocations: 325811)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/sofiacastelli/Documents/GitHub/BinBrain/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2024-05-19 12:59:55 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.8ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 7872)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+warning package.json: No license field
+Invalid configuration object. Webpack has been initialised using a configuration object that does not match the API schema.
+ - configuration.entry should be an non-empty object.
+   -> Multiple entry bundles are created. The key is the chunk name. The value can be a string or an array.
+
+  Rendered layout layouts/application.html.erb (Duration: 688.4ms | Allocations: 11823)
+Completed 500 Internal Server Error in 691ms (ActiveRecord: 1.1ms | Allocations: 12086)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/sofiacastelli/Documents/GitHub/BinBrain/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:02:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 23.8ms | Allocations: 28719)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+./bin/webpack: --> ./bin/webpack
+syntax error, unexpected ':', expecting end-of-input
+>  3  default: &default
+>  4    source_path: app/javascript
+>  5    source_entry_path: packs
+>  6    public_output_path: packs
+>  7    cache_path: tmp/cache/webpacker
+>  8    check_yarn_integrity: true
+> 10  development:
+> 11    <<: *default
+> 12    compile: true
+> 14  ENV["RAILS_ENV"] ||= ENV["RACK_ENV"] || "development"
+> 15  ENV["NODE_ENV"]  ||= "development"
+./bin/webpack:3: syntax error, unexpected ':', expecting end-of-input (SyntaxError)
+default: &default
+       ^
+
+
+  Rendered layout layouts/application.html.erb (Duration: 205.0ms | Allocations: 34709)
+Completed 500 Internal Server Error in 353ms (ActiveRecord: 1.7ms | Allocations: 325809)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Users/sofiacastelli/Documents/GitHub/BinBrain/BinBrain/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:03:41 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 16008)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 16832)
+Completed 200 OK in 21ms (Views: 14.7ms | ActiveRecord: 3.1ms | Allocations: 19010)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:05:17 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 11918)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 12010)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.0ms | Allocations: 14107)
+
+
+  
+ActionView::Template::Error (undefined method `empresa_path' for #<ActionView::Base:0x00000000013060>):
+    13:         <td><%= empresa.name %></td>
+    14:         <td><%= empresa.producto_escaneados.sum(:cantidad) %></td>
+    15:         <td>
+    16:           <%= link_to 'Ver Empresa', empresa_path(empresa), class: 'btn btn-primary' %>
+    17:         </td>
+    18:       </tr>
+    19:     <% end %>
+  
+app/views/home/index.html.erb:16
+app/views/home/index.html.erb:11
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:07:09 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 16376)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 17092)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.7ms | Allocations: 19223)
+
+
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:07:11 -0400
+  
+ActionController::RoutingError (uninitialized constant EmpresasController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:09:47 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:11
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:14
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:14
+  Rendered home/index.html.erb within layouts/application (Duration: 32.9ms | Allocations: 16265)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 16980)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 2.1ms | Allocations: 19096)
+
+
+Started GET "/empresas/3" for 127.0.0.1 at 2024-05-19 13:09:48 -0400
+  
+ActionController::RoutingError (uninitialized constant EmpresasController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:11:24 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["empresa_id", 1], ["empresa_id", 2], ["empresa_id", 3], ["empresa_id", 4], ["empresa_id", 5], ["empresa_id", 6], ["empresa_id", 7], ["empresa_id", 8], ["empresa_id", 9], ["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 16313)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 17059)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 1.9ms | Allocations: 19189)
+
+
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:11:25 -0400
+  
+ActionController::RoutingError (uninitialized constant EmpresasController):
+  
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:12:50 -0400
+  
+ActionController::RoutingError (uninitialized constant EmpresasController):
+  
+Started GET "/empresas/3" for 127.0.0.1 at 2024-05-19 13:12:53 -0400
+  
+ActionController::RoutingError (uninitialized constant EmpresasController):
+  
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/empresas/3" for 127.0.0.1 at 2024-05-19 13:15:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant EmpresasController):
+  
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:15:17 -0400
+  
+ActionController::RoutingError (uninitialized constant EmpresasController):
+  
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:17:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/empresas/1"):
+  
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:17:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/empresas/1"):
+  
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:18:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/empresas/1"):
+  
+Started GET "/empresas/1" for 127.0.0.1 at 2024-05-19 13:18:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/empresas/1"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:18:55 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 15614)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 15718)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.3ms | Allocations: 24628)
+
+
+  
+ActionView::Template::Error (undefined method `home_show_path' for #<ActionView::Base:0x0000000000ca80>):
+    15:         <td><%= empresa.name %></td>
+    16:         <td><%= empresa.producto_escaneados.sum(:cantidad) %></td>
+    17:         <td>
+    18:           <%= link_to 'Ver Empresa', home_show_path(empresa), class: 'btn btn-primary' %>
+    19:         </td>
+    20:       </tr>
+    21:     <% end %>
+  
+app/views/home/index.html.erb:18
+app/views/home/index.html.erb:13
+Started GET "/" for 127.0.0.1 at 2024-05-19 13:20:01 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 11448)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 12312)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 1.7ms | Allocations: 14406)
+
+
+Started GET "/home/1" for 127.0.0.1 at 2024-05-19 13:20:03 -0400
+Processing by HomeController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmpresa Load (0.0ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering home/show.html.erb within layouts/application
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/show.html.erb:3
+  [1m[36mProductoEscaneado Load (0.0ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/show.html.erb:14
+  Rendered home/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 9877)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 10603)
+Completed 200 OK in 18ms (Views: 11.5ms | ActiveRecord: 1.4ms | Allocations: 16951)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2024-05-19 13:20:07 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.3ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 6554)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 6966)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.9ms | Allocations: 7289)
+
+
+Started GET "/home/5" for 127.0.0.1 at 2024-05-19 13:20:08 -0400
+Processing by HomeController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering home/show.html.erb within layouts/application
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/show.html.erb:3
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/show.html.erb:14
+  Rendered home/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1149)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1563)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 2185)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2024-05-19 13:20:11 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 6290)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6717)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.6ms | Allocations: 6985)
+
+
+Started GET "/home/7" for 127.0.0.1 at 2024-05-19 13:20:13 -0400
+Processing by HomeController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering home/show.html.erb within layouts/application
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/show.html.erb:3
+  [1m[36mProductoEscaneado Load (0.0ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/show.html.erb:14
+  Rendered home/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1148)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1565)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2186)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2024-05-19 13:20:15 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6283)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 6704)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 6965)
+
+
+Started GET "/home/3" for 127.0.0.1 at 2024-05-19 13:20:26 -0400
+Processing by HomeController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering home/show.html.erb within layouts/application
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/show.html.erb:3
+  [1m[36mProductoEscaneado Load (0.1ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/show.html.erb:14
+  Rendered home/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1149)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1569)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 2190)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2024-05-19 13:20:28 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.2ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 6290)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6708)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 6976)
+
+
+Started GET "/home/6" for 127.0.0.1 at 2024-05-19 13:20:30 -0400
+Processing by HomeController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas" WHERE "empresas"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering home/show.html.erb within layouts/application
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/show.html.erb:3
+  [1m[36mProductoEscaneado Load (0.2ms)[0m  [1m[34mSELECT "producto_escaneados".* FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/show.html.erb:14
+  Rendered home/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1149)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1560)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 2182)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2024-05-19 13:20:31 -0400
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mEmpresa Load (0.1ms)[0m  [1m[34mSELECT "empresas".* FROM "empresas"[0m
+  ↳ app/views/home/index.html.erb:13
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 1]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 2]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 3]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.2ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 4]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.1ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 5]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 6]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 7]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 8]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 9]]
+  ↳ app/views/home/index.html.erb:16
+  [1m[36mProductoEscaneado Sum (0.0ms)[0m  [1m[34mSELECT SUM("producto_escaneados"."cantidad") FROM "producto_escaneados" WHERE "producto_escaneados"."empresa_id" = ?[0m  [["empresa_id", 10]]
+  ↳ app/views/home/index.html.erb:16
+  Rendered home/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 6283)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 6683)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.6ms | Allocations: 6943)
+
+
